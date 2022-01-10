@@ -94,6 +94,12 @@
               <div *ngIf="f.confirmPassword.errors.mustMatch">
                 Passwords must match
               </div>
+               <div *ngIf="f('confirmPassword').hasError('required')">
+                Passwords must match
+              </div>
+              <!-- <div *ngIf="frm.controls['confirmPassword'].hasError('required')">
+                  Passwords is required
+              </div> -->
             </div>
           </div>
         </div>
